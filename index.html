@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Festival-Sape-Luni</title>
+</head>
+<body>
+    <header>
+        
+        <section id="section1">
+            <h1 class="h1"><strong class="FSL">FSL.</strong></h1>
+            <nav>
+                
+                <ul id="ul">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="Billetterie/billetterie.html">Billetterie</a></li>
+                    <li> <a href="line-up/lineup.html">Line-up</a></li>
+                </ul>
+            </nav>
+            <div class="header_burger">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+</svg>
+
+            </div>
+        </section>
+        <section id="section2">
+            <p class="p1">BRAZZALILLE 4 - 6 SEPTEMBRE</p>
+            <div class="div">
+            <p class="p2"><strong class="ftv">Festival</strong><br><strong class="Sape">Sape</strong><span>&</span><strong class="lum">Lumière</strong></p>
+            <p class="p3">Trois jours d'élégence congolaise de musique de live 
+            d'installation  lumineux dans les espaces publics de brazzaville</p>
+            
+            </div>
+            <div id="div1" class="div1" >
+            <p id="jours" class="container"></p>
+            <p id="heures" class="container"></p>
+            <p id="minutes" class="container"></p>
+            <p id="secondes" class="container"></p>
+            </div>
+
+            <div id="div2" class="div2">
+                <button class="rvs"><a href="https://api.whatsapp.com/send/?phone=242060000000&text=Bonjour%2C+je+souhaite+r%C3%A9server+un+Pass+1+Jour+pour+le+Festival+Sape+%26+Lumi%C3%A8re.&type=phone_number&app_absent=0">Réserver ma place</a></button>
+                <button class="vlp">voir le programme</button>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="programme">
+  <h2>Programme du Festival</h2>
+
+  <div class="tabs">
+    <button class="tab active" data-day="vendredi">Vendredi</button>
+    <button class="tab" data-day="samedi">Samedi</button>
+    <button class="tab" data-day="dimanche">Dimanche</button>
+  </div>
+
+  <div class="content" id="content">
+    <!-- Les infos du jour s’afficheront ici -->
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+        <p> &copy; 2026 Festival Sape & Lumière — Line-Up Officiel.</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+</html>
