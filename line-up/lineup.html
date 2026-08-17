@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="lineup.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  
     <title>line-up</title>
 </head>
 <body>
@@ -25,15 +27,119 @@
 
             </div>
         </section>
-        
     </header>
 
 
     <main>
+    <section id="artistes">
+  <div class="artist-inner">
+    <p class="artist-eyebrow">Programmation</p>
+    <h2 class="artist-title">Artistes & Créateurs</h2>
 
+    <div class="filter-buttons">
+      <button class="filter-btn active" data-filter="all">Tous</button>
+      <button class="filter-btn" data-filter="musique">Musique</button>
+      <button class="filter-btn" data-filter="mode">Mode & Sape</button>
+      <button class="filter-btn" data-filter="lumiere">Art Lumière</button>
+    </div>
+
+    <div class="artist-grid" id="artist-grid"></div>
+  </div>
+</section>
     </main>
     <footer class="footer">
         <p> &copy; 2026 Festival Sape & Lumière — Line-Up Officiel.</p>
     </footer>
+    <script>
+    
+  const CATEGORY_STYLES = {
+    'musique': { name: 'Musique', bg: 'rgba(224, 64, 176, 0.2)', text: '#e040b0' },
+    'mode':    { name: 'Mode & Sape', bg: 'rgba(232, 184, 75, 0.2)', text: '#e8b84b' },
+    'lumiere': { name: 'Art Lumière', bg: 'rgba(106, 212, 255, 0.2)', text: '#6ad4ff' }
+  };
+
+  const ARTISTS = [
+    {
+      name: "Koffi Brazza",
+      category: "musique",
+      discipline: "Rumba Congolaise moderne",
+      bio: "Pionnier du renouveau de la rumba, Koffi fusionne rythmes traditionnels et sonorités urbaines.",
+      image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&fit=crop"
+    },
+    {
+      name: "Yves Saint-Brazza",
+      category: "mode",
+      discipline: "Maître Sapeur & Designer",
+      bio: "Figure emblématique de Bacongo, célèbre pour ses associations de couleurs audacieuses et ses coupes sur mesure.",
+      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&fit=crop"
+    },
+    {
+      name: "Mireille Essomba",
+      category: "lumiere",
+      discipline: "Artiste plasticienne lumière",
+      bio: "Sculptrice de lumière créant des installations immersives géantes inspirées des motifs textiles africains.",
+      image: "istockphoto-1268391609-1024x1024.jpg"
+    },
+    {
+      name: "Imara Soul",
+      category: "musique",
+      discipline: "Afro-Jazz & Soul",
+      bio: "Une voix envoûtante portée par des mélodies cuivrées et un groove urbain d'une intensité rare.",
+      image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&fit=crop"
+    },
+    {
+      name: "Maison Mwana",
+      category: "mode",
+      discipline: "Haute Couture Africaine",
+      bio: "Maison de couture réinventant les codes du costume trois-pièces avec des tissus pagne structurés.",
+      image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&fit=crop"
+    },
+    {
+      name: "Neon Savane Studio",
+      category: "lumiere",
+      discipline: "Mapping vidéo & Néons",
+      bio: "Collectif de créateurs visuels spécialisés dans la projection monumentale sur façades urbaines.",
+      image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&fit=crop"
+    }
+  ];
+
+  function renderArtists(filter = 'all') {
+    const grid = document.getElementById('artist-grid');
+    const filtered = filter === 'all' 
+      ? ARTISTS 
+      : ARTISTS.filter(a => a.category === filter);
+
+    grid.innerHTML = filtered.map(artist => {
+      const style = CATEGORY_STYLES[artist.category];
+      return `
+        <div class="artist-card">
+          <div class="artist-img-wrapper">
+            <img src="${artist.image}" alt="${artist.name}" class="artist-img" loading="lazy" />
+            <span class="artist-badge" style="background: ${style.bg}; color: ${style.text}">
+              ${style.name}
+            </span>
+          </div>
+          <div class="artist-info">
+            <h3 class="artist-name">${artist.name}</h3>
+            <p class="artist-discipline">${artist.discipline}</p>
+            <p class="artist-bio">${artist.bio}</p>
+          </div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Filtrage par boutons
+  document.querySelectorAll('.filter-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      renderArtists(button.dataset.filter);
+    });
+  });
+
+  // Rendu initial
+  renderArtists();
+    </script>
 </body>
 </html>

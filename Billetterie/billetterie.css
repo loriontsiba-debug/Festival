@@ -3,13 +3,11 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 text-decoration: none;
-font-family: "Inter", sans-serif;
-font-optical-sizing: auto;
-font-weight: 700;
-font-style: normal;
+font-family: 'Outfit', sans-serif;
 }
 /*entete*/
 header{
+font-family: 'Outfit', sans-serif;
 width: 100%;
 max-width: 100%;
 height: 50px;
@@ -81,6 +79,192 @@ nav{
 display: none;
 }
 }
+
+/*billeterie*/
+body {
+      font-family: 'Outfit', sans-serif;
+      background: #07070f;
+      color: #f0f0f8;
+    }
+
+
+    #billetterie {
+      padding: 96px 24px;
+      background: #07070f;
+    }
+
+    .ticket-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    
+    .ticket-eyebrow {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      font-weight: 600;
+      color: #e040b0;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .ticket-title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-size: clamp(2.5rem, 6vw, 3.75rem);
+      color: #f0f0f8;
+      line-height: 1;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .ticket-subtitle {
+      font-size: 1rem;
+      color: #9898b8;
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    
+    .ticket-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+   
+    .ticket-card {
+      background: #10101c;
+      border: 1px solid rgba(240, 240, 248, 0.08);
+      border-radius: 20px;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .ticket-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .ticket-card.popular {
+      border-color: rgba(232, 184, 75, 0.4);
+      background: linear-gradient(180deg, #16162a 0%, #10101c 100%);
+    }
+
+    .badge-popular {
+      position: absolute;
+      top: -14px;
+      right: 28px;
+      background: #e8b84b;
+      color: #07070f;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+
+    .ticket-name {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 700;
+      font-size: 1.75rem;
+      color: #f0f0f8;
+      margin-bottom: 8px;
+    }
+
+    .ticket-desc {
+      font-size: 0.9rem;
+      color: #9898b8;
+      line-height: 1.5;
+      margin-bottom: 24px;
+    }
+
+    .ticket-price {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 900;
+      font-size: 2.5rem;
+      color: #e8b84b;
+      margin-bottom: 32px;
+    }
+
+    .ticket-price span {
+      font-size: 1rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      color: #9898b8;
+    }
+
+    
+    .ticket-features {
+      list-style: none;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ticket-features li {
+      font-size: 0.9rem;
+      color: #c8c8e0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .ticket-features svg {
+      width: 18px;
+      height: 18px;
+      color: #e8b84b;
+      flex-shrink: 0;
+    }
+
+    
+    .btn-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      padding: 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s, opacity 0.2s;
+      background: #25D366;
+      color: #07070f;
+    }
+
+    .btn-whatsapp:hover {
+      opacity: 0.9;
+    }
+
+    .btn-whatsapp svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*footer*/

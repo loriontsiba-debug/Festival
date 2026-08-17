@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet" />
+  
     <title>Festival-Sape-Luni</title>
 </head>
 <body>
@@ -28,7 +30,7 @@
         </section>
         <section id="section2">
             <p class="p1">BRAZZALILLE 4 - 6 SEPTEMBRE</p>
-            <div class="div">
+            <div class="char">
             <p class="p2"><strong class="ftv">Festival</strong><br><strong class="Sape">Sape</strong><span>&</span><strong class="lum">Lumière</strong></p>
             <p class="p3">Trois jours d'élégence congolaise de musique de live 
             d'installation  lumineux dans les espaces publics de brazzaville</p>
@@ -49,21 +51,133 @@
     </header>
 
     <main>
-        <section class="programme">
-  <h2>Programme du Festival</h2>
+      <section id="programme">
+    <div class="prog-inner">
+    <p class="prog-eyebrow">4 – 6 Septembre 2026</p>
+    <h2 class="prog-title">Programme</h2>
 
-  <div class="tabs">
-    <button class="tab active" data-day="vendredi">Vendredi</button>
-    <button class="tab" data-day="samedi">Samedi</button>
-    <button class="tab" data-day="dimanche">Dimanche</button>
+    <div class="prog-tabs">
+      <button class="prog-tab active" data-day="vendredi">
+        <span class="tab-date">4 Sept.</span>
+        <span class="tab-day">Vendredi</span>
+        <span class="tab-indicator"></span>
+      </button>
+      <button class="prog-tab" data-day="samedi">
+        <span class="tab-date">5 Sept.</span>
+        <span class="tab-day">Samedi</span>
+        <span class="tab-indicator"></span>
+      </button>
+      <button class="prog-tab" data-day="dimanche">
+        <span class="tab-date">6 Sept.</span>
+        <span class="tab-day">Dimanche</span>
+        <span class="tab-indicator"></span>
+      </button>
+    </div>
+
+    <div class="prog-events" id="prog-events"></div>
   </div>
+</section><hr>
+<!--FAQ-->
+ <section id="faq">
+  <div class="faq-inner">
+    <p class="faq-eyebrow">Questions fréquentes</p>
+    <h2 class="faq-title">FAQ</h2>
 
-  <div class="content" id="content">
-    <!-- Les infos du jour s’afficheront ici -->
+    <div class="faq-list" id="faq-list"></div>
+  </div>
+</section><hr>
+<section id="partenaires">
+  <div class="partenaires-inner">
+    <p class="partenaires-eyebrow">Partenaires &amp; soutiens</p>
+    <div class="partenaires-grid" id="partenaires-grid"></div>
+  </div>
+</section><hr>
+  <section id="contact">
+  <div class="contact-inner">
+
+    
+    <div>
+      <p class="contact-eyebrow">Nous contacter</p>
+      <h2 class="contact-title">Une question ?</h2>
+      <p class="contact-desc">
+        Pour toute question générale sur le festival, remplissez le formulaire ci-contre.
+        Pour réserver vos places, utilisez les boutons WhatsApp dans la section Billetterie.
+      </p>
+
+      <div class="contact-infos">
+
+        <div class="contact-info-item">
+          <div class="contact-icon" style="background: rgba(224,64,176,0.12);">
+
+          </div>
+          <div class="contact-info-text">
+            <p>WhatsApp Billetterie</p>
+            <a href="https://wa.me/242060000000" style="color: #e040b0;">+242 06 000 0000</a>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon" style="background: rgba(232,184,75,0.12);">
+
+          </div>
+          <div class="contact-info-text">
+            <p>Email</p>
+            <span style="color: #e8b84b;">contact@festivalsapelumiere.cg</span>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-icon" style="background: rgba(106,212,255,0.10);">
+            
+          </div>
+          <div class="contact-info-text">
+            <p>Lieu</p>
+            <span style="color: #6ad4ff;">Esplanade du Fleuve, Brazzaville</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Colonne droite : formulaire -->
+    <div>
+      <form class="contact-form" id="contact-form" novalidate>
+        <div class="form-field">
+          <label for="nom">Nom complet</label>
+          <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+        </div>
+        <div class="form-field">
+          <label for="telephone">Téléphone</label>
+          <input type="tel" id="telephone" name="telephone" placeholder="+242 0X XXX XXXX" required />
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Votre message..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Envoyer le message</button>
+      </form>
+
+      <div class="success-box" id="success-box">
+        <div class="success-icon">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M8 16l6 6 10-10" stroke="#4ddb9a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>Message envoyé !</h3>
+        <p>Nous vous répondrons dans les 48 heures.</p>
+        <button onclick="resetForm()">Envoyer un autre message</button>
+      </div>
+    </div>
+
   </div>
 </section>
 
+<main>
+   
     </main>
+
+
+
 
     <footer class="footer">
         <p> &copy; 2026 Festival Sape & Lumière — Line-Up Officiel.</p>
