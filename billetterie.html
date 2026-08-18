@@ -11,22 +11,29 @@
 <body>
     <header>
         
-        <section id="section1">
-            <h1 class="h1"><strong class="FSL">FSL.</strong></h1>
-            <nav>
-                <ul id="ul">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="billetterie.html">Billetterie</a></li>
-                    <li> <a href="lineup.html">Line-up</a></li>
-                </ul>
-            </nav>
-            <div class="header_burger">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-</svg>
-            </div>
-        </section>
-        
+       <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">FSL<span>.</span></a>
+
+      <div class="nav-links">
+        <a href="index.html">Acceuil</a>
+        <a href="lineup.html">line-up</a>
+        <a href="billetterie.html">Billetterie</a>
+        <a href="" class="nav-cta">Réserver</a>
+      </div>
+
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Accueil</a>
+      <a href="lineup.html">line-up</a>
+      <a href="billetterie.html">billetterie</a>
+     
     </header>
     <main>
     <section id="billetterie">
@@ -106,6 +113,6 @@
 
   renderTickets();
 </script>
-    
+    <script src="app.js"></script>
 </body>
 </html>

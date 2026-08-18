@@ -1,23 +1,56 @@
 //compte a rebours
+//   Navigation et Scroll 
+    const navbar = document.getElementById('navbar');
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobile-menu');
 
-setInterval( ()=>{
-const today = new Date().getTime()
-const event = new Date("2026-08-23 00:00:00").getTime()
-const calcul = event-today
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
 
-const jours = Math.floor(calcul / (1000*60*60*24))
-const heures = Math.floor((calcul % (1000*60*60*24))/(1000*60*60))
-const minutes = Math.floor((calcul %(1000*60*60))/(1000*60))
-const secondes = Math.floor((calcul % (1000*60))/1000)
+    burger.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      burger.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen);
+    });
 
-document.getElementById("jours").innerHTML= jours +"J :";
-document.getElementById("heures").innerHTML= heures +"H :";
-document.getElementById("minutes").innerHTML= minutes +"M :";
-document.getElementById("secondes").innerHTML= secondes +"S ";
-if(calcul ===0){
-    document.getElementById("div1").innerHTML= "c'est parti!"
-}
-},1000)
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    //  Compte à Rebour
+    const targetDate = new Date('2026-08-23 18:00:00').getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const diff = targetDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('days').innerText = '00';
+        document.getElementById('hours').innerText = '00';
+        document.getElementById('minutes').innerText = '00';
+        document.getElementById('seconds').innerText = '00';
+        return;
+      }
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('days').innerText = String(d).padStart(2, '0');
+      document.getElementById('hours').innerText = String(h).padStart(2, '0');
+      document.getElementById('minutes').innerText = String(m).padStart(2, '0');
+      document.getElementById('seconds').innerText = String(s).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
 //programme des jours
 
   const CATEGORY_COLORS = {
@@ -182,10 +215,10 @@ if(calcul ===0){
     form.style.display = 'flex';
     successBox.classList.remove('visible');
   }
-  //section partenaire
+  /*//section partenaire
   const PARTNERS = [
     { name: 'Ville de Brazzaville' },
-    { name: 'Ministère de la Culture' },
+    { name: 'armoirie-congo-brazzaville-en-couleur-seeklogo.svg' },
     { name: 'Congo Télécom' },
     { name: 'Air Congo' },
     { name: 'Fondation Kamba' },
@@ -194,11 +227,11 @@ if(calcul ===0){
 
   const grid = document.getElementById('partenaires-grid');
 
-  grid.innerHTML = PARTNERS.map(p => `
-    <div class="partenaire-card" title="${p.name}">
-      <span>${p.name}</span>
+  grid.innerHTML = PARTNERS.map(img => `
+    <div class="partenaire-card" title="${img.name}">
+      <span>${img.name}</span>
     </div>
-  `).join('');
+  `).join('');*/
   //billeterie
 
   const PHONE_NUMBER = "242060000000"; 

@@ -10,44 +10,73 @@
 </head>
 <body>
     <header>
-        
-        <section id="section1">
-            <h1 class="h1"><strong class="FSL">FSL.</strong></h1>
-            <nav>
-                
-                <ul id="ul">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="billetterie.html">Billetterie</a></li>
-                    <li> <a href="lineup.html">Line-up</a></li>
-                </ul>
-            </nav>
-            <div class="header_burger">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-</svg>
+     <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">FSL<span>.</span></a>
 
-            </div>
-        </section>
-        <section id="section2">
-            <p class="p1">BRAZZALILLE 4 - 6 SEPTEMBRE</p>
-            <div class="char">
-            <p class="p2"><strong class="ftv">Festival</strong><br><strong class="Sape">Sape</strong><span>&</span><strong class="lum">Lumière</strong></p>
-            <p class="p3">Trois jours d'élégence congolaise de musique de live 
-            d'installation  lumineux dans les espaces publics de brazzaville</p>
-            
-            </div>
-            <div id="div1" class="div1" >
-            <p id="jours" class="container"></p>
-            <p id="heures" class="container"></p>
-            <p id="minutes" class="container"></p>
-            <p id="secondes" class="container"></p>
-            </div>
+      <div class="nav-links">
+        <a href="index.html">Acceuil</a>
+        <a href="lineup.html">line-up</a>
+        <a href="billetterie.html">Billetterie</a>
+        <a href="billetterie.html" class="nav-cta">Réserver</a>
+      </div>
 
-            <div id="div2" class="div2">
-                <button class="rvs"><a href="https://api.whatsapp.com/send/?phone=242060000000&text=Bonjour%2C+je+souhaite+r%C3%A9server+un+Pass+1+Jour+pour+le+Festival+Sape+%26+Lumi%C3%A8re.&type=phone_number&app_absent=0">Réserver ma place</a></button>
-                <button class="vlp">voir le programme</button>
-            </div>
-        </section>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Accueil</a>
+      <a href="lineup.html">line-up</a>
+      <a href="billetterie.html">billetterie</a>
+     
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <p class="hero-badge">4 – 6 Septembre 2026 • Brazzaville</p>
+      <h1 class="hero-title">Festival Sape & Lumière</h1>
+      <p class="hero-subtitle">
+        Trois jours d'élégance congolaise, de musique live et d'installations lumineuses dans les espaces publics de Brazzaville.
+      </p>
+
+      <!-- Compte à rebours -->
+      <div class="countdown-grid">
+        <div class="countdown-item">
+          <span class="countdown-number" id="days">00</span>
+          <span class="countdown-label">Jours</span>
+        </div>
+        <span class="countdown-colon">:</span>
+        <div class="countdown-item">
+          <span class="countdown-number" id="hours">00</span>
+          <span class="countdown-label">Heures</span>
+        </div>
+        <span class="countdown-colon">:</span>
+        <div class="countdown-item">
+          <span class="countdown-number" id="minutes">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <span class="countdown-colon">:</span>
+        <div class="countdown-item">
+          <span class="countdown-number" id="seconds">00</span>
+          <span class="countdown-label">Secondes</span>
+        </div>
+      </div>
+
+      <!-- Actions (sans le bouton Découvrir) -->
+      <div class="hero-actions">
+        <a href="billetterie.html" class="btn-primary">Réserver ma place</a>
+        <a href="" class="btn-secondary">
+           Voir le programme
+        </a>
+      </div>
+    </div>
+  </section>   
     </header>
 
     <main>
@@ -86,12 +115,22 @@
     <div class="faq-list" id="faq-list"></div>
   </div>
 </section><hr>
+<!--partenaire-->
 <section id="partenaires">
   <div class="partenaires-inner">
     <p class="partenaires-eyebrow">Partenaires &amp; soutiens</p>
-    <div class="partenaires-grid" id="partenaires-grid"></div>
+    <div class="partenaires-grid" id="partenaires-grid">
+
+      <div class="partenaire-card img1"></div>
+      <div class="partenaire-card img2"></div>
+      <div class="partenaire-card img3"></div>
+      <div class="partenaire-card img4"></div>
+      <div class="partenaire-card img5"></div>
+      <div class="partenaire-card img6"></div>
+    </div>
   </div>
 </section><hr>
+
   <section id="contact">
   <div class="contact-inner">
 
@@ -175,9 +214,6 @@
 <main>
    
     </main>
-
-
-
 
     <footer class="footer">
         <p> &copy; 2026 Festival Sape & Lumière — Line-Up Officiel.</p>
