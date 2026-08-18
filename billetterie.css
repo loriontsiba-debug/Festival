@@ -15,7 +15,6 @@ nav {
 
     nav.scrolled {
       background: rgba(7, 7, 15, 0.96);
-      backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(232, 184, 75, 0.15);
     }
 
@@ -46,7 +45,7 @@ nav {
     }
 
     .nav-links a {
-      font-size: 0.875rem;
+       font-size: 1.4rem;
       font-weight: 500;
       color: #9898b8;
       text-decoration: none;
