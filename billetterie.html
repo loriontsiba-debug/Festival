@@ -112,7 +112,30 @@
   }
 
   renderTickets();
+
+    //menu burger  
+    const navbar = document.getElementById('navbar');
+    const burger = document.getElementById('burger');
+    const menu = document.getElementById('mobile-menu');
+
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    }, { passive: true });
+
+    burger.addEventListener('click', () => {
+      const isOpen = menu.classList.toggle('open');
+      burger.classList.toggle('open', isOpen);
+      burger.setAttribute('aria-expanded', isOpen);
+    });
+
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+      });
+    });
 </script>
-    <script src="app.js"></script>
+   
 </body>
 </html>

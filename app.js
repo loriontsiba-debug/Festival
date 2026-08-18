@@ -215,23 +215,7 @@
     form.style.display = 'flex';
     successBox.classList.remove('visible');
   }
-  /*//section partenaire
-  const PARTNERS = [
-    { name: 'Ville de Brazzaville' },
-    { name: 'armoirie-congo-brazzaville-en-couleur-seeklogo.svg' },
-    { name: 'Congo Télécom' },
-    { name: 'Air Congo' },
-    { name: 'Fondation Kamba' },
-    { name: 'Total Energies Congo' },
-  ];
-
-  const grid = document.getElementById('partenaires-grid');
-
-  grid.innerHTML = PARTNERS.map(img => `
-    <div class="partenaire-card" title="${img.name}">
-      <span>${img.name}</span>
-    </div>
-  `).join('');*/
+ 
   //billeterie
 
   const PHONE_NUMBER = "242060000000"; 
