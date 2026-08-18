@@ -23,6 +23,9 @@ body{
 max-width: 100%;
 background-color: rgb(12, 12, 17);
 }
+hr{
+border: 1px solid rgb(12, 12, 17);;
+}
 #section1{
 font-size: 1.2rem;
 display: flex;
@@ -313,6 +316,9 @@ body {
     }
 
 /*partenaire*/
+    #partenaires{
+    background-color:#1a1a2e;
+    }
     #faq {
       padding: 96px 24px;
     }
