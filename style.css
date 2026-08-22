@@ -63,6 +63,7 @@ ody {
       transition: color 0.2s;
     }
 
+
     .nav-links a:hover { color: #e8b84b; }
 
     .nav-links .nav-cta {
@@ -132,10 +133,64 @@ ody {
       align-items: center;
       justify-content: center;
       padding: 120px 24px 60px;
-      background-image: url(photo-1645506424213-95a26e09789f.avif);
-      background-size: cover;
-      background-position: center;
     }
+    .hero-slider{
+    position: absolute;
+    inset: 0;
+    }
+    .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    }
+    .slide.prog-tab.active{
+    opacity: 1;
+    }
+    /*slider*/
+  .hero-slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: fadeSlider 12s infinite ease-in-out;
+}
+
+
+.hero-slider .slide1 {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('lumiere.jpeg');
+  animation-delay: 0s;
+}
+
+.hero-slider .slide2 {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('sapeur.jpeg');
+  animation-delay: 4s; /* Décalage pour la 2ème image */
+}
+
+.hero-slider .slide3 {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('les gens.46.jpeg');
+  animation-delay: 8s; /* Décalage pour la 3ème image */
+}
+.hero-slider .slide4 {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('photo-1645506424213-95a26e09789f.avif');
+  animation-delay: 8s;
+}
+
+/* Animation en fondu */
+@keyframes fadeSlider {
+  0% { opacity: 0; }
+  10% { opacity: 1; }  
+  33% { opacity: 1; }  
+  43% { opacity: 0; }  
+  100% { opacity: 0; }
+}
+
 
     /* Gradient overlay pour lisibilité */
     #hero::before {
@@ -782,7 +837,7 @@ body {
       border: 1px solid rgba(240, 240, 248, 0.07);
       transition: opacity 0.2s, border-color 0.2s, transform 0.2s;
       cursor: default;
-    
+      
     }
     .img1{
       border-radius: 10px;
@@ -795,20 +850,20 @@ body {
     }
     .img2{
       border-radius: 10px;
-      background-image: url(armoirie-congo-brazzaville-en-couleur-seeklogo.svg);
-      background-size: cover;
+      background-image: url("brasco.png");
+      background-size:cover;
       background-color: #fff;
       background-repeat: repeat;
-      background-position: center;
+      background-position:initial;
       object-fit: cover;
     }
     .img3{
       border-radius: 10px;
-      background-image: url(valdhy-mbemba-fjc3mp-tGhY-unsplash.jpg);
-      background-size: cover;
+      background-image: url(vival.jfif);
+     background-size:cover;
       background-color: #fff;
       background-repeat: repeat;
-      background-position: center;
+      background-position:center;
       object-fit: cover;
     }
     .img4{
@@ -822,7 +877,7 @@ body {
     }
     .img5{
       border-radius: 10px;
-      background-image: url(fondation\ kamba.png);
+      background-image: url(mtn.png);
       background-size: cover;
       background-color: #fff;
       background-repeat: repeat;

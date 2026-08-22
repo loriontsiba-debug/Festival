@@ -50,6 +50,7 @@
       <button class="filter-btn" data-filter="musique">Musique</button>
       <button class="filter-btn" data-filter="mode">Mode & Sape</button>
       <button class="filter-btn" data-filter="lumiere">Art Lumière</button>
+      <button class="filter-btn" data-filter="lumiere">Influenceur</button>
     </div>
 
     <div class="artist-grid" id="artist-grid"></div>
@@ -64,7 +65,8 @@
   const CATEGORY_STYLES = {
     'musique': { name: 'Musique', bg: 'rgba(224, 64, 176, 0.2)', text: '#e040b0' },
     'mode':    { name: 'Mode & Sape', bg: 'rgba(232, 184, 75, 0.2)', text: '#e8b84b' },
-    'lumiere': { name: 'Art Lumière', bg: 'rgba(106, 212, 255, 0.2)', text: '#6ad4ff' }
+    'lumiere': { name: 'Art Lumière', bg: 'rgba(106, 212, 255, 0.2)', text: '#6ad4ff' },
+    'influenceur': { name: 'influenceur', bg: 'rgba(106, 212, 255, 0.2)', text: '#6ad4ff' }
   };
 
   const ARTISTS = [
@@ -73,14 +75,14 @@
       category: "musique",
       discipline: "Rumba Congolaise moderne",
       bio: "Pionnier du renouveau de la rumba, Koffi fusionne rythmes traditionnels et sonorités urbaines.",
-      image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&fit=crop"
+      image: "koffi de brazza.jfif"
     },
     {
       name: "Yves Saint-Brazza",
       category: "mode",
       discipline: "Maître Sapeur & Designer",
       bio: "Figure emblématique de Bacongo, célèbre pour ses associations de couleurs audacieuses et ses coupes sur mesure.",
-      image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&fit=crop"
+      image: "iyves saint de brazza.jfif"
     },
     {
       name: "Mireille Essomba",
@@ -94,21 +96,42 @@
       category: "musique",
       discipline: "Afro-Jazz & Soul",
       bio: "Une voix envoûtante portée par des mélodies cuivrées et un groove urbain d'une intensité rare.",
-      image: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?w=600&fit=crop"
+      image: "imara.jfif"
     },
     {
       name: "Maison Mwana",
       category: "mode",
       discipline: "Haute Couture Africaine",
       bio: "Maison de couture réinventant les codes du costume trois-pièces avec des tissus pagne structurés.",
-      image: "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=600&fit=crop"
+      image: "maison mwana.jfif"
     },
     {
       name: "Neon Savane Studio",
       category: "lumiere",
       discipline: "Mapping vidéo & Néons",
       bio: "Collectif de créateurs visuels spécialisés dans la projection monumentale sur façades urbaines.",
-      image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?w=600&fit=crop"
+      image: "neon savane.jfif"
+    },
+    {
+      name: "Warano the king",
+      category: "influenceur",
+      discipline: "Creation de contenu/Entertaiment",
+      bio: "Influenceur et createur de contenu de congolaise connu Pour ses publications et vidéos de divertissement",
+      image: "warano.jfif"
+    },
+    {
+      name: "money love",
+      category: "influenceur",
+      discipline: "Beauté/Coiffure",
+      bio: "créatrice de contenu spécialisée das la beauté et lla coiffure, avec une forte présence sur tiktok",
+      image: "money love.jfif"
+    },
+    {
+      name: "lecaleb2",
+      category: "influenceur",
+      discipline: "Humour/Lifestyle",
+      bio: "Influenceur congolais présent sur les sociaux, notament tiktok, avec des contenus axés sur le divertissement",
+      image: "lecaleb2.jfif"
     }
   ];
 
